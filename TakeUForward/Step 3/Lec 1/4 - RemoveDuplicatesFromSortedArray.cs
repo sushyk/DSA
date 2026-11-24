@@ -1,0 +1,18 @@
+// [1,1,1,2,2,2,2,3,3,3,3,4,4]
+// No driver calls in the original Python file.
+
+static int RemoveDuplicates(int[] arr)
+{
+    int i = 0;
+
+    for (int j = 0; j < arr.Length; j++)
+    {
+        if (arr[j] != arr[i])
+        {
+            arr[i + 1] = arr[j];
+            i += 1;
+        }
+    }
+
+    return i + 1;
+}
